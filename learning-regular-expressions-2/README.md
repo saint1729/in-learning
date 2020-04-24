@@ -50,34 +50,13 @@ Write a regex to
 1. Match "do" or "does" followed by "no", "not", or "nothing", even when it occurs at the start of a sentence <br />
     **[Dd]o(es)? no(t(hing)?)?** (https://regexr.com/536os)
 
-## 5. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 5. Challenge: Anchors
+1. How many paragraphs start with "I" as in "I read"? <br />
+    **^I\b** *9* (https://regexr.com/536qu)
+1. How many paragraphs end with a question mark? <br />
+    **\\?$** *1* (https://regexr.com/536rg)
+1. Match all words with exactly 15 letters, including hyphenated words <br />
+    **\b[\w\\-]{15}\b** (https://regexr.com/536rp)
 
 
 
