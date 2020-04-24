@@ -33,7 +33,24 @@ Write a regex to
     **circumnavigation** (https://regexr.com/536e0)
 
 ## 3. Challenge: Repetition
+1. Write one regular expression to match self, himself, herself, itself, myself, yourself, thyself <br />
+    **\w{0,4}self** (https://regexr.com/536l7)
+1. Write one regular expression that matches both "virtue" and "virtues" <br />
+    **virtues?** (https://regexr.com/536lm)
+1. Use quantified repetition to find the word that starts with "T" and has 12 letters <br />
+    **T\w{11}** *Tranquillity* (https://regexr.com/536m8)
+1. Match all text inside quotation marks, but nothing that is not inside them <br />
+    **".*?"** (https://regexr.com/536me)
 
+## 4. Challenge: Grouping and alternation
+1. Match "myself", "yourself", "thyself", but not "himself", "itself" <br />
+    **(my|your|thy)self** (https://regexr.com/536oa)
+1. Match "good", "goodness", and "goods" without typing "good" more than once <br />
+    **good(s|ness)?** (https://regexr.com/536om)
+1. Match "do" or "does" followed by "no", "not", or "nothing", even when it occurs at the start of a sentence <br />
+    **[Dd]o(es)? no(t(hing)?)?** (https://regexr.com/536os)
+
+## 5. 
 
 
 
