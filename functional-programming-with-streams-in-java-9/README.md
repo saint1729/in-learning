@@ -218,6 +218,66 @@ Comparator&lt;Employee&gt;
     byNameAndSalary = byName.thenComparing(bySalary);
 </pre>
 
+## Streams
+* Instance methods of Stream<T>
+    1. Intermediate: return Stream<T> or Stream<R>
+    2. Terminal: return anything else, or _void_
+### 1. Filtering Operations
+* Based on:
+    1. content: filter, takeWhile, dropWhile
+    2. amount:  limit
+    3. uniqueness:  distinct
+
+#### Filter Operation
+Discards all elements which violate a Predicate
+
+`Stream<T> filter(Predicate<? super T> property)`
+
+#### Limit Operation
+Picks the first `n` elements (or less)
+
+`Stream<T> limit(long n)`
+
+#### Distinct Operation
+Discards duplicates (according to equals)
+
+`Stream<T> distinct()`
+
+##### Example
+**Objective:** Select 10 random positive distinct integers
+
+```
+final Random rand = new Random()
+Stream<Integer> randoms = Stream.generate(rand::nextInt)
+
+randoms.filter(n -> (n > 0))
+       .distinct()
+       .limit(10)
+       .forEach(System.out::println);
+```
+### 2. Transforming and Rearranging Stream elements
+
+#### Transforming Operations
+* Apply functions that modify content and type
+
+```
+function T -> Stream<R>: flatMap (Section 4)
+function T -> T or T -> R: map
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
