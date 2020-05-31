@@ -219,9 +219,53 @@ Comparator&lt;Employee&gt;
 </pre>
 
 ## Streams
-* Instance methods of Stream<T>
-    1. Intermediate: return Stream<T> or Stream<R>
+
+### Comparing streams, collections and iterators
+
+#### Sequences of Objects:
+* List
+    * add
+    * remove
+    * search
+    * scan/iterate
+
+* Iterator
+    * scan/iterator (remove)
+
+* Stream
+    * internal operation (apply some operation on every object of the sequence)
+
+
+Ex: Printing a sequence of objects
+
+<pre>
+    List&lt;Integer&gt; l = ...;
+    for (Integer n : l) {
+        System.out.println(n);
+    }
+</pre>
+<pre>
+    Iterator&lt;Integer&gt; i = ...;
+    while (i.hasNext()) {
+        System.out.println(i.next());
+    }
+</pre>
+<pre>
+    Stream&lt;Integer&gt; s = ...;
+    s.forEach(System.out::println);
+</pre>
+
+| Description | Pipeline | Example|
+|:-----:|:----:|:---:|
+| ![](src/main/resources/images/Operations1.png) | ![](src/main/resources/images/Operations2.png) | ![](src/main/resources/images/Operations3.png) |
+
+
+
+* Instance methods of Stream&lt;a&gt;
+    1. Intermediate: return Stream&lt;T&gt; or Stream&lt;R&gt;
     2. Terminal: return anything else, or _void_
+
+
 ### 1. Filtering Operations
 * Based on:
     1. content: filter, takeWhile, dropWhile
